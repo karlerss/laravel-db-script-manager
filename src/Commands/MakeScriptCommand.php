@@ -1,12 +1,10 @@
 <?php
 
-
 namespace Karlerss\LaravelDbScriptManager\Commands;
 
-
 use Illuminate\Console\Command;
-use Illuminate\Database\Migrations\MigrationCreator;
 use Illuminate\Support\Composer;
+use Illuminate\Database\Migrations\MigrationCreator;
 
 class MakeScriptCommand extends Command
 {
@@ -31,8 +29,8 @@ class MakeScriptCommand extends Command
 
     public function handle()
     {
-        $dir = $this->laravel->databasePath() . DIRECTORY_SEPARATOR . 'scripts';
-        if (!file_exists($dir)) {
+        $dir = $this->laravel->databasePath().DIRECTORY_SEPARATOR.'scripts';
+        if (! file_exists($dir)) {
             mkdir($dir, 0777, true);
         }
 
