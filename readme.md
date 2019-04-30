@@ -47,7 +47,7 @@ MIT. Please see the [license file](license.md) for more information.
 [ico-version]: https://img.shields.io/packagist/v/karlerss/laravel-db-script-manager.svg?style=flat-square
 [ico-downloads]: https://img.shields.io/packagist/dt/karlerss/laravel-db-script-manager.svg?style=flat-square
 [ico-travis]: https://img.shields.io/travis/karlerss/laravel-db-script-manager/master.svg?style=flat-square
-[ico-styleci]: https://styleci.io/repos/12345678/shield
+[ico-styleci]: https://styleci.io/repos/q5wmdW/shield
 
 [link-packagist]: https://packagist.org/packages/karlerss/laravel-db-script-manager
 [link-downloads]: https://packagist.org/packages/karlerss/laravel-db-script-manager
