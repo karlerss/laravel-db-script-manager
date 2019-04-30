@@ -1,4 +1,4 @@
-# LaravelDbScriptManager
+# laravel-db-script-manager
 
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Total Downloads][ico-downloads]][link-downloads]
@@ -44,15 +44,15 @@ If you discover any security related issues, please email author email instead o
 
 MIT. Please see the [license file](license.md) for more information.
 
-[ico-version]: https://img.shields.io/packagist/v/karlerss/laraveldbscriptmanager.svg?style=flat-square
-[ico-downloads]: https://img.shields.io/packagist/dt/karlerss/laraveldbscriptmanager.svg?style=flat-square
-[ico-travis]: https://img.shields.io/travis/karlerss/laraveldbscriptmanager/master.svg?style=flat-square
+[ico-version]: https://img.shields.io/packagist/v/karlerss/laravel-db-script-manager.svg?style=flat-square
+[ico-downloads]: https://img.shields.io/packagist/dt/karlerss/laravel-db-script-manager.svg?style=flat-square
+[ico-travis]: https://img.shields.io/travis/karlerss/laravel-db-script-manager/master.svg?style=flat-square
 [ico-styleci]: https://styleci.io/repos/12345678/shield
 
-[link-packagist]: https://packagist.org/packages/karlerss/laraveldbscriptmanager
-[link-downloads]: https://packagist.org/packages/karlerss/laraveldbscriptmanager
-[link-travis]: https://travis-ci.org/karlerss/laraveldbscriptmanager
-[link-styleci]: https://styleci.io/repos/12345678
+[link-packagist]: https://packagist.org/packages/karlerss/laravel-db-script-manager
+[link-downloads]: https://packagist.org/packages/karlerss/laravel-db-script-manager
+[link-travis]: https://travis-ci.org/karlerss/laravel-db-script-manager
+[link-styleci]: https://styleci.io/repos/q5wmdW
 [link-author]: https://github.com/karlerss
 [author name]: Karl-Sander Erss
 [link-contributors]: ../../contributors
