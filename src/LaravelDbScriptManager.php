@@ -6,6 +6,6 @@ class LaravelDbScriptManager
 {
     public static function getScriptsPath()
     {
-        return app()->databasePath() . DIRECTORY_SEPARATOR . 'scripts';
+        return app()->databasePath().DIRECTORY_SEPARATOR.'scripts';
     }
 }

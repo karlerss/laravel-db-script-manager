@@ -3,9 +3,8 @@
 namespace Karlerss\LaravelDbScriptManager;
 
 use Illuminate\Database\MigrationServiceProvider;
-use Karlerss\LaravelDbScriptManager\Commands\MakeScriptCommand;
 use Karlerss\LaravelDbScriptManager\Commands\MigrateCommand;
-use Karlerss\LaravelDbScriptManager\Commands\MigrateScriptsCommand;
+use Karlerss\LaravelDbScriptManager\Commands\MakeScriptCommand;
 
 class LaravelDbScriptManagerServiceProvider extends MigrationServiceProvider
 {
@@ -30,13 +29,11 @@ class LaravelDbScriptManagerServiceProvider extends MigrationServiceProvider
      */
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__ . '/../config/laravel-db-script-manager.php', 'laravel-db-script-manager');
+        $this->mergeConfigFrom(__DIR__.'/../config/laravel-db-script-manager.php', 'laravel-db-script-manager');
 
         $this->app->singleton('command.migrate', function ($app) {
             return new MigrateCommand($app['migrator']);
         });
-
-
     }
 
     /**
@@ -58,7 +55,7 @@ class LaravelDbScriptManagerServiceProvider extends MigrationServiceProvider
     {
         // Publishing the configuration file.
         $this->publishes([
-            __DIR__ . '/../config/laravel-db-script-manager.php' => config_path('laravel-db-script-manager.php'),
+            __DIR__.'/../config/laravel-db-script-manager.php' => config_path('laravel-db-script-manager.php'),
         ], 'laravel-db-script-manager.config');
 
         $this->commands([

@@ -1,15 +1,13 @@
 <?php
 
-
 namespace Karlerss\LaravelDbScriptManager\Commands;
 
-
-use Illuminate\Database\Console\Migrations\MigrateCommand as BaseMigrateCommand;
-use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Migrations\Migrator;
-use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\Collection;
+use Illuminate\Filesystem\Filesystem;
+use Illuminate\Database\Migrations\Migrator;
+use Illuminate\Database\Migrations\Migration;
 use Karlerss\LaravelDbScriptManager\LaravelDbScriptManager;
+use Illuminate\Database\Console\Migrations\MigrateCommand as BaseMigrateCommand;
 
 class MigrateCommand extends BaseMigrateCommand
 {
@@ -22,7 +20,7 @@ class MigrateCommand extends BaseMigrateCommand
     {
         $this->files = app(Filesystem::class);
 
-        $this->description = $this->description . '. Also migrates scripts.';
+        $this->description = $this->description.'. Also migrates scripts.';
         parent::__construct($migrator);
     }
 
@@ -36,7 +34,7 @@ class MigrateCommand extends BaseMigrateCommand
     }
 
     /**
-     * Runs up() for all scripts
+     * Runs up() for all scripts.
      */
     protected function scriptsUp(): void
     {
@@ -48,7 +46,7 @@ class MigrateCommand extends BaseMigrateCommand
     }
 
     /**
-     * Runs down() for all scripts
+     * Runs down() for all scripts.
      */
     protected function scriptsDown(): void
     {
@@ -61,7 +59,7 @@ class MigrateCommand extends BaseMigrateCommand
     }
 
     /**
-     * Gets all db script instances
+     * Gets all db script instances.
      *
      * @return Collection
      */
