@@ -1,16 +1,15 @@
 {
     "name": "karlerss/laravel-db-script-manager",
-    "description": ":description",
-    "license": "license",
+    "description": "Manage database views, stored procedures etc with Laravel",
+    "license": "MIT",
     "authors": [
         {
-            "name": "author name",
-            "email": "author email",
-            "homepage": "author homepage"
+            "name": "Karl-Sander Erss",
+            "email": "karl.erss@gmail.com"
         }
     ],
     "homepage": "https://github.com/karlerss/laravel-db-script-manager",
-    "keywords": ["Laravel", "LaravelDbScriptManager"],
+    "keywords": ["Laravel", "Database migrations", "Database views"],
     "require": {
         "illuminate/support": "~5"
     },

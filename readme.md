@@ -12,7 +12,7 @@ This is where your description should go. Take a look at [contributing.md](contr
 Via Composer
 
 ``` bash
-$ composer require karlerss/laraveldbscriptmanager
+$ composer require karlerss/laravel-db-script-manager
 ```
 
 ## Usage
@@ -42,7 +42,7 @@ If you discover any security related issues, please email author email instead o
 
 ## License
 
-license. Please see the [license file](license.md) for more information.
+MIT. Please see the [license file](license.md) for more information.
 
 [ico-version]: https://img.shields.io/packagist/v/karlerss/laraveldbscriptmanager.svg?style=flat-square
 [ico-downloads]: https://img.shields.io/packagist/dt/karlerss/laraveldbscriptmanager.svg?style=flat-square
@@ -54,4 +54,5 @@ license. Please see the [license file](license.md) for more information.
 [link-travis]: https://travis-ci.org/karlerss/laraveldbscriptmanager
 [link-styleci]: https://styleci.io/repos/12345678
 [link-author]: https://github.com/karlerss
+[author name]: Karl-Sander Erss
 [link-contributors]: ../../contributors
