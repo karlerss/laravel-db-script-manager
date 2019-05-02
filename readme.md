@@ -37,7 +37,7 @@ If you discover any security related issues, please email author email instead o
 
 ## Credits
 
-- [author name][link-author]
+- [Karl-Sander Erss][link-author]
 - [All Contributors][link-contributors]
 
 ## License
@@ -54,5 +54,4 @@ MIT. Please see the [license file](license.md) for more information.
 [link-travis]: https://travis-ci.org/karlerss/laravel-db-script-manager
 [link-styleci]: https://styleci.io/repos/184257216
 [link-author]: https://github.com/karlerss
-[author name]: Karl-Sander Erss
 [link-contributors]: ../../contributors
