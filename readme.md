@@ -1,11 +1,20 @@
-# laravel-db-script-manager
+# Laravel Database Script Manager
 
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Total Downloads][ico-downloads]][link-downloads]
 [![Build Status][ico-travis]][link-travis]
 [![StyleCI][ico-styleci]][link-styleci]
 
-This is where your description should go. Take a look at [contributing.md](contributing.md) to see a to do list.
+Managing database objects in a version controlled application is hard.
+Laravel's migrate functionality gets us half way there.
+Managing your views, triggers and stored procedures with Laravel's migrations
+is error-prone or really verbose (try modifying a table which is used for a view).
+ 
+This package modifies `php artisan migrate` command so that:
+
+1. All script-defined database objects are removed
+1. Your migrations are executed
+1. All script-defined database objects are added again
 
 ## Installation
 
@@ -17,14 +26,19 @@ $ composer require karlerss/laravel-db-script-manager
 
 ## Usage
 
-## Change log
+Create a new script:
 
-Please see the [changelog](changelog.md) for more information on what has changed recently.
+`php artisan make:db-script add_active_users_view`
+
+A file similar to a migration file is created in _database/scripts_.
+
+Implement the `up()` and `down()` methods. The down mehtod sql script should check 
+if the database object exists (`DROP VIEW IF EXISTS active_users`).
 
 ## Testing
 
 ``` bash
-$ composer test
+$ vendor/bin/phpunit
 ```
 
 ## Contributing
