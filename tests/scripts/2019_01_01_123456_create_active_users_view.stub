@@ -1,0 +1,22 @@
+<?php
+use Illuminate\Database\Migrations\Migration;
+
+class CreateActiveUsersView extends Migration
+{
+    public function up()
+    {
+        \DB::statement(<<<SQL
+CREATE VIEW active_users AS 
+SELECT id, (name||email) as calculated_name
+FROM users
+SQL
+        );
+
+
+    }
+
+    public function down()
+    {
+        \DB::statement('DROP VIEW IF EXISTS active_users');
+    }
+}
