@@ -39,7 +39,7 @@ class DbScriptManagerTest extends TestCase
         $this->artisan('make:db-script quick_test');
         $splFileInfos = $fs->files($scriptsDir);
         $this->assertCount(1, $splFileInfos);
-        $this->assertContains('QuickTest', $splFileInfos[0]->getContents());
+        $this->assertRegexp('/QuickTest/', $splFileInfos[0]->getContents());
     }
 
     /**
@@ -51,8 +51,8 @@ class DbScriptManagerTest extends TestCase
         /** @var Filesystem $fs */
         $fs = app(Filesystem::class);
         $fs->copy(
-            __DIR__.'/scripts/2019_01_01_123456_create_active_users_view.stub',
-            $this->getScriptsDir().DIRECTORY_SEPARATOR.'2019_01_01_123456_create_active_users_view.php'
+            __DIR__ . '/scripts/2019_01_01_123456_create_active_users_view.stub',
+            $this->getScriptsDir() . DIRECTORY_SEPARATOR . '2019_01_01_123456_create_active_users_view.php'
         );
 
         $res = $this->artisan('migrate', ['--path' => 'migrations'])->execute();
@@ -76,6 +76,6 @@ class DbScriptManagerTest extends TestCase
      */
     private function getScriptsDir(): string
     {
-        return app()->databasePath().DIRECTORY_SEPARATOR.'scripts';
+        return app()->databasePath() . DIRECTORY_SEPARATOR . 'scripts';
     }
 }

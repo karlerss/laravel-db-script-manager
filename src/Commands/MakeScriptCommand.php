@@ -11,29 +11,24 @@ class MakeScriptCommand extends Command
     protected $signature = 'make:db-script {name}';
 
     /**
-     * @var MigrationCreator
+     * @var \Illuminate\Filesystem\Filesystem
      */
-    protected $creator;
+    protected $fs;
 
-    /**
-     * @var Composer
-     */
-    protected $composer;
-
-    public function __construct(MigrationCreator $creator, Composer $composer)
+    public function __construct(\Illuminate\Filesystem\Filesystem $fs)
     {
-        $this->creator = $creator;
-        $this->composer = $composer;
+        $this->fs = $fs;
         parent::__construct();
     }
 
     public function handle()
     {
-        $dir = $this->laravel->databasePath().DIRECTORY_SEPARATOR.'scripts';
-        if (! file_exists($dir)) {
+        $dir = $this->laravel->databasePath() . DIRECTORY_SEPARATOR . 'scripts';
+        if (!file_exists($dir)) {
             mkdir($dir, 0777, true);
         }
 
-        $this->creator->create($this->argument('name'), $dir);
+        (new MigrationCreator($this->fs, $this->laravel->basePath('stubs')))
+            ->create($this->argument('name'), $dir);
     }
 }
